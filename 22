@@ -1,0 +1,26 @@
+安装非系统自带openssh服务版
+
+过程
+    1、开始--Windows PowerShell--以管理员身份运行
+    2、执行命令 cd "C:\Program Files\OpenSSH-Win64"
+    3、执行命令 Set-ExecutionPolicy AllSigned
+    4、运行install-sshd.ps1 脚本进行安装，选A
+    5、我的电脑--管理--服务--OpenSSH SSH Server--启动
+
+验证
+    任务管理器--sshd存在即可。
+
+相关--PowerShell
+    #更新执行策略
+    Set-ExecutionPolicy <policy-name>
+    
+    #policy-name可能的值
+    Unrestricted、RemoteSigned、AllSigned、Restricted、Default、Bypass、Undefined
+    ------------------------------------------------
+    参考
+    power shell执行策略(ExecutionPolicy)
+    https://blog.csdn.net/u014711094/article/details/78510113
+
+参考
+Windows Powershell 安装 SSHD 服务 支持ssh远程访问
+https://blog.csdn.net/yidichaxiang/article/details/104642175
